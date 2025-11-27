@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Produit extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'designation',
+        'prix',
+        'qte',
+        'c_id',
+    ];
+
+
+    public function Categorie(){
+        return $this -> belongsTo(Categorie::class,'c_id');
+    }
+}
