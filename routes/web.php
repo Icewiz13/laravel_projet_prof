@@ -45,9 +45,6 @@ Route::post('del-categorie' , [CategorieListeController::class, "destroy"]);
 Route::post('edit-categorie'  , [CategorieEditController::class, "index"]);
 Route::post('update-categorie', [CategorieEditController::class, "update"]);
 
-// ====================
-// SIMPLE AUTH ROUTES
-// ====================
 
 // Show login form
 Route::get('login', function() {

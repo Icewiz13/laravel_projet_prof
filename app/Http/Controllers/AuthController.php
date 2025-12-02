@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    // Just login
     public function login(Request $request)
     {
         if (Auth::attempt($request->only('email', 'password'))) {
@@ -19,7 +18,6 @@ class AuthController extends Controller
         return back()->with('error', 'Invalid credentials');
     }
     
-    // Just register
     public function register(Request $request)
     {
         $user = User::create([
